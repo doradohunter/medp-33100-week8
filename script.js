@@ -4,6 +4,19 @@ const API_URL = 'https://bible-api.com/'; //Book + Chapter : Verse
 // URL Encoding Functions
 // encodeURLComponent ie. #
 
+async function getRandomBible(){
+    try{
+        const response = await fetch(API_URL + '?random=verse');
+        if (!response.ok){  //All of the fetches (API calls) should have a catch
+            throw new Error('Something wrong with getting the Bible' + error);
+        }
+        const data = await response.json();
+        return data;
+    } catch(error){
+        console.error('Something wrong with getting the Bible', error);
+    }
+}
+
 async function getBible(verse){
     try{
         const response = await fetch(API_URL + 'john ' + verse);
@@ -15,7 +28,6 @@ async function getBible(verse){
     } catch(error){
         console.error('Something wrong with getting the Bible', error);
     }
-    
 }
 
 const prayButton = document.querySelector('.prayButton');
@@ -53,7 +65,6 @@ function holyCalc(){
         }
     }
     holyVerse(name,year)
-    console.log(name,year)
 }
 
 function holyVerse(name, year){
@@ -68,17 +79,23 @@ function holyVerse(name, year){
         vrs = chpt+2
     }
     userVerse = `${chpt}:${vrs}`
-    console.log(userVerse)
 }
 
 async function renderHoliness(){
     const bibleText = await getBible(userVerse)
 
     verse.innerText = bibleText["verses"][0]["book_name"] + ' ' + bibleText["verses"][0]["chapter"] + ':' + bibleText["verses"][0]["verse"];
-    text.innerText = bibleText["verses"][0]["text"];
+    text.innerText = bibleText["verses"][0]["text"];    
 }
 
 prayButton.addEventListener('click', async () => {
     buttonClick();
     await renderHoliness();
 });
+
+async function randomHoliness(){
+    const bibleRandom = await getRandomBible()
+
+    text.innerText = bibleRandom["verses"][0]["text"];    
+}
+randomHoliness()

@@ -35,6 +35,7 @@ const userSection = document.querySelector('.userInfo');
 const holySection = document.querySelector('.holyInfo');
 const verse = document.querySelector('.verse');
 const text = document.querySelector('.text');
+const dailyText = document.querySelector('.dailyText');
 
 let userVerse = "";
 
@@ -96,6 +97,6 @@ prayButton.addEventListener('click', async () => {
 async function randomHoliness(){
     const bibleRandom = await getRandomBible()
 
-    text.innerText = bibleRandom["verses"][0]["text"];    
+    dailyText.innerText = bibleRandom["verses"][0]["text"];    
 }
 randomHoliness()

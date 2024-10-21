@@ -1,0 +1,91 @@
+body {
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 50px 200px;
+}
+
+.content{
+    max-width: fit-content;
+    margin: auto;
+}
+
+.collection {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.buttons{
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.buttons button{
+    padding: 5px;
+    font-size: large;
+}
+
+.icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.title {
+    text-align: center;
+    font-style: oblique;
+}
+
+.character {
+    background-color: lightgrey;
+    padding: 15px;
+    width: 250px;
+    /* height: 415px; */
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/*class for each element/vision*/
+.Anemo {
+    background-color: #63BAAD;
+}
+
+.Geo {
+    background-color: goldenrod;
+}
+
+.Electro {
+    background-color: #8142bb;
+    color: white;
+}
+
+.Dendro {
+    background-color: #aae273;
+}
+
+.Hydro {
+    background-color: #1e90ff;
+}
+
+.Pyro {
+    background-color: #B22222;
+    color: white;
+}
+
+.Cryo {
+    background-color: #B0C4DE;
+}

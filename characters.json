@@ -1,0 +1,698 @@
+[
+    {
+        "icon": "https://genshin.jmp.blue/characters/albedo/icon-big",
+        "name": "Albedo",
+        "rarity": 5,
+        "vision": "Geo",
+        "weapon": "Sword",
+        "nation": "Mondstadt"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/alhaitham/icon-big",
+        "name": "Alhaitham",
+        "rarity": 5,
+        "vision": "Dendro",
+        "weapon": "Sword",
+        "nation": "Sumeru"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/aloy/icon-big",
+        "name": "Aloy",
+        "rarity": 5,
+        "vision": "Cryo",
+        "weapon": "Bow",
+        "nation": "Outlander"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/amber/icon-big",
+        "name": "Amber",
+        "rarity": 4,
+        "vision": "Pyro",
+        "weapon": "Bow",
+        "nation": "Mondstadt"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/arataki-itto/icon-big",
+        "name": "Arataki Itto",
+        "rarity": 5,
+        "vision": "Geo",
+        "weapon": "Claymore",
+        "nation": "Inazuma"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/arlecchino/icon-big",
+        "name": "Arlecchino",
+        "rarity": 5,
+        "vision": "Pyro",
+        "weapon": "Polearm",
+        "nation": "Snezhnaya"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/ayaka/icon-big",
+        "name": "Kamisato Ayaka",
+        "rarity": 5,
+        "vision": "Cryo",
+        "weapon": "Sword",
+        "nation": "Inazuma"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/ayato/icon-big",
+        "name": "Kamisato Ayato",
+        "rarity": 5,
+        "vision": "Hydro",
+        "weapon": "Sword",
+        "nation": "Inazuma"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/baizhu/icon-big",
+        "name": "Baizhu",
+        "rarity": 5,
+        "vision": "Dendro",
+        "weapon": "Catalyst",
+        "nation": "Liyue"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/barbara/icon-big",
+        "name": "Barbara",
+        "rarity": 4,
+        "vision": "Hydro",
+        "weapon": "Catalyst",
+        "nation": "Mondstadt"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/beidou/icon-big",
+        "name": "Beidou",
+        "rarity": 4,
+        "vision": "Electro",
+        "weapon": "Claymore",
+        "nation": "Liyue"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/bennett/icon-big",
+        "name": "Bennett",
+        "rarity": 4,
+        "vision": "Pyro",
+        "weapon": "Sword",
+        "nation": "Mondstadt"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/candace/icon-big",
+        "name": "Candace",
+        "rarity": 4,
+        "vision": "Hydro",
+        "weapon": "Polearm",
+        "nation": "Sumeru"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/charlotte/icon-big",
+        "name": "Charlotte",
+        "rarity": 4,
+        "vision": "Cryo",
+        "weapon": "Catalyst",
+        "nation": "Fontaine"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/chevreuse/icon-big",
+        "name": "Chevreuse",
+        "rarity": 4,
+        "vision": "Pyro",
+        "weapon": "Polearm",
+        "nation": "Fontaine"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/chiori/icon-big",
+        "name": "Chiori",
+        "rarity": 5,
+        "vision": "Geo",
+        "weapon": "Sword",
+        "nation": "Inazuma"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/chongyun/icon-big",
+        "name": "Chongyun",
+        "rarity": 4,
+        "vision": "Cryo",
+        "weapon": "Claymore",
+        "nation": "Liyue"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/clorinde/icon-big",
+        "name": "Clorinde",
+        "rarity": 5,
+        "vision": "Electro",
+        "weapon": "Sword",
+        "nation": "Fontaine"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/collei/icon-big",
+        "name": "Collei",
+        "rarity": 4,
+        "vision": "Dendro",
+        "weapon": "Bow",
+        "nation": "Sumeru"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/cyno/icon-big",
+        "name": "Cyno",
+        "rarity": 5,
+        "vision": "Electro",
+        "weapon": "Polearm",
+        "nation": "Sumeru"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/dehya/icon-big",
+        "name": "Dehya",
+        "rarity": 5,
+        "vision": "Pyro",
+        "weapon": "Claymore",
+        "nation": "Sumeru"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/diluc/icon-big",
+        "name": "Diluc",
+        "rarity": 5,
+        "vision": "Pyro",
+        "weapon": "Claymore",
+        "nation": "Mondstadt"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/diona/icon-big",
+        "name": "Diona",
+        "rarity": 4,
+        "vision": "Cryo",
+        "weapon": "Bow",
+        "nation": "Mondstadt"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/dori/icon-big",
+        "name": "Dori",
+        "rarity": 4,
+        "vision": "Electro",
+        "weapon": "Claymore",
+        "nation": "Sumeru"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/emilie/icon-big",
+        "name": "Emilie",
+        "rarity": 5,
+        "vision": "Dendro",
+        "weapon": "Polearm",
+        "nation": "Fontaine"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/eula/icon-big",
+        "name": "Eula",
+        "rarity": 5,
+        "vision": "Cryo",
+        "weapon": "Claymore",
+        "nation": "Mondstadt"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/faruzan/icon-big",
+        "name": "Faruzan",
+        "rarity": 4,
+        "vision": "Anemo",
+        "weapon": "Bow",
+        "nation": "Sumeru"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/fischl/icon-big",
+        "name": "Fischl",
+        "rarity": 4,
+        "vision": "Electro",
+        "weapon": "Bow",
+        "nation": "Mondstadt"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/freminet/icon-big",
+        "name": "Freminet",
+        "rarity": 4,
+        "vision": "Cryo",
+        "weapon": "Claymore",
+        "nation": "Fontaine"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/furina/icon-big",
+        "name": "Furina",
+        "rarity": 5,
+        "vision": "Hydro",
+        "weapon": "Sword",
+        "nation": "Fontaine"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/gaming/icon-big",
+        "name": "Gaming",
+        "rarity": 4,
+        "vision": "Pyro",
+        "weapon": "Claymore",
+        "nation": "Liyue"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/ganyu/icon-big",
+        "name": "Ganyu",
+        "rarity": 5,
+        "vision": "Cryo",
+        "weapon": "Bow",
+        "nation": "Liyue"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/gorou/icon-big",
+        "name": "Gorou",
+        "rarity": 4,
+        "vision": "Geo",
+        "weapon": "Bow",
+        "nation": "Inazuma"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/hu-tao/icon-big",
+        "name": "Hu Tao",
+        "rarity": 5,
+        "vision": "Pyro",
+        "weapon": "Polearm",
+        "nation": "Liyue"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/jean/icon-big",
+        "name": "Jean",
+        "rarity": 5,
+        "vision": "Anemo",
+        "weapon": "Sword",
+        "nation": "Mondstadt"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/kachina/icon-big",
+        "name": "Kachina",
+        "rarity": 4,
+        "vision": "Geo",
+        "weapon": "Polearm",
+        "nation": "Natlan"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/kaeya/icon-big",
+        "name": "Kaeya",
+        "rarity": 4,
+        "vision": "Cryo",
+        "weapon": "Sword",
+        "nation": "Mondstadt"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/kaveh/icon-big",
+        "name": "Kaveh",
+        "rarity": 5,
+        "vision": "Dendro",
+        "weapon": "Claymore",
+        "nation": "Sumeru"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/kazuha/icon-big",
+        "name": "Kaedehara Kazuha",
+        "rarity": 5,
+        "vision": "Anemo",
+        "weapon": "Sword",
+        "nation": "Inazuma"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/keqing/icon-big",
+        "name": "Keqing",
+        "rarity": 5,
+        "vision": "Electro",
+        "weapon": "Sword",
+        "nation": "Liyue"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/kinich/icon-big",
+        "name": "Kinich",
+        "rarity": 5,
+        "vision": "Dendro",
+        "weapon": "Claymore",
+        "nation": "Natlan"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/kirara/icon-big",
+        "name": "Kirara",
+        "rarity": 4,
+        "vision": "Dendro",
+        "weapon": "Sword",
+        "nation": "Inazuma"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/klee/icon-big",
+        "name": "Klee",
+        "rarity": 5,
+        "vision": "Pyro",
+        "weapon": "Catalyst",
+        "nation": "Mondstadt"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/kokomi/icon-big",
+        "name": "Sangonomiya Kokomi",
+        "rarity": 5,
+        "vision": "Hydro",
+        "weapon": "Catalyst",
+        "nation": "Inazuma"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/kuki-shinobu/icon-big",
+        "name": "Kuki Shinobu",
+        "rarity": 4,
+        "vision": "Electro",
+        "weapon": "Sword",
+        "nation": "Inazuma"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/layla/icon-big",
+        "name": "Layla",
+        "rarity": 4,
+        "vision": "Cryo",
+        "weapon": "Sword",
+        "nation": "Sumeru"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/lisa/icon-big",
+        "name": "Lisa",
+        "rarity": 4,
+        "vision": "Electro",
+        "weapon": "Catalyst",
+        "nation": "Mondstadt"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/lynette/icon-big",
+        "name": "Lynette",
+        "rarity": 4,
+        "vision": "Anemo",
+        "weapon": "Sword",
+        "nation": "Fontaine"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/lyney/icon-big",
+        "name": "Lyney",
+        "rarity": 5,
+        "vision": "Pyro",
+        "weapon": "Bow",
+        "nation": "Fontaine"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/mika/icon-big",
+        "name": "Mika",
+        "rarity": 4,
+        "vision": "Cryo",
+        "weapon": "Polearm",
+        "nation": "Mondstadt"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/mona/icon-big",
+        "name": "Mona",
+        "rarity": 5,
+        "vision": "Hydro",
+        "weapon": "Catalyst",
+        "nation": "Mondstadt"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/mualani/icon-big",
+        "name": "Mualani",
+        "rarity": 5,
+        "vision": "Hydro",
+        "weapon": "Catalyst",
+        "nation": "Natlan"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/nahida/icon-big",
+        "name": "Nahida",
+        "rarity": 5,
+        "vision": "Dendro",
+        "weapon": "Catalyst",
+        "nation": "Sumeru"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/navia/icon-big",
+        "name": "Navia",
+        "rarity": 5,
+        "vision": "Geo",
+        "weapon": "Claymore",
+        "nation": "Fontaine"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/neuvillette/icon-big",
+        "name": "Neuvillette",
+        "rarity": 5,
+        "vision": "Hydro",
+        "weapon": "Catalyst",
+        "nation": "Fontaine"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/nilou/icon-big",
+        "name": "Nilou",
+        "rarity": 5,
+        "vision": "Hydro",
+        "weapon": "Sword",
+        "nation": "Sumeru"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/ningguang/icon-big",
+        "name": "Ningguang",
+        "rarity": 5,
+        "vision": "Geo",
+        "weapon": "Catalyst",
+        "nation": "Liyue"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/noelle/icon-big",
+        "name": "Noelle",
+        "rarity": 4,
+        "vision": "Geo",
+        "weapon": "Claymore",
+        "nation": "Mondstadt"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/qiqi/icon-big",
+        "name": "Qiqi",
+        "rarity": 5,
+        "vision": "Cryo",
+        "weapon": "Sword",
+        "nation": "Liyue"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/raiden/icon-big",
+        "name": "Raiden Shogun",
+        "rarity": 5,
+        "vision": "Electro",
+        "weapon": "Polearm",
+        "nation": "Inazuma"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/razor/icon-big",
+        "name": "Razor",
+        "rarity": 4,
+        "vision": "Electro",
+        "weapon": "Claymore",
+        "nation": "Mondstadt"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/rosaria/icon-big",
+        "name": "Rosaria",
+        "rarity": 4,
+        "vision": "Cryo",
+        "weapon": "Polearm",
+        "nation": "Mondstadt"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/sara/icon-big",
+        "name": "Kujou Sara",
+        "rarity": 4,
+        "vision": "Electro",
+        "weapon": "Bow",
+        "nation": "Inazuma"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/sayu/icon-big",
+        "name": "Sayu",
+        "rarity": 4,
+        "vision": "Anemo",
+        "weapon": "Claymore",
+        "nation": "Inazuma"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/sethos/icon-big",
+        "name": "Sethos",
+        "rarity": 4,
+        "vision": "Electro",
+        "weapon": "Bow",
+        "nation": "Sumeru"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/shenhe/icon-big",
+        "name": "Shenhe",
+        "rarity": 5,
+        "vision": "Cryo",
+        "weapon": "Polearm",
+        "nation": "Liyue"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/shikanoin-heizou/icon-big",
+        "name": "Shikanoin Heizou",
+        "rarity": 4,
+        "vision": "Anemo",
+        "weapon": "Catalyst",
+        "nation": "Inazuma"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/sigewinne/icon-big",
+        "name": "Sigewinne",
+        "rarity": 5,
+        "vision": "Hydro",
+        "weapon": "Bow",
+        "nation": "Fontaine"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/sucrose/icon-big",
+        "name": "Sucrose",
+        "rarity": 4,
+        "vision": "Anemo",
+        "weapon": "Catalyst",
+        "nation": "Mondstadt"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/thoma/icon-big",
+        "name": "Thoma",
+        "rarity": 4,
+        "vision": "Pyro",
+        "weapon": "Polearm",
+        "nation": "Inazuma"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/tighnari/icon-big",
+        "name": "Tighnari",
+        "rarity": 5,
+        "vision": "Dendro",
+        "weapon": "Bow",
+        "nation": "Sumeru"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/traveler-hydro/icon-big",
+        "name": "Traveler (Lumine/Aether)",
+        "rarity": 5,
+        "vision": "None",
+        "weapon": "Sword",
+        "nation": "Outlander"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/venti/icon-big",
+        "name": "Venti",
+        "rarity": 5,
+        "vision": "Anemo",
+        "weapon": "Bow",
+        "nation": "Mondstadt"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/wanderer/icon-big",
+        "name": "Wanderer",
+        "rarity": 5,
+        "vision": "Anemo",
+        "weapon": "Catalyst",
+        "nation": "Sumeru"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/wriothesley/icon-big",
+        "name": "Wriothesley",
+        "rarity": 5,
+        "vision": "Cryo",
+        "weapon": "Catalyst",
+        "nation": "Fontaine"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/xiangling/icon-big",
+        "name": "Xiangling",
+        "rarity": 4,
+        "vision": "Pyro",
+        "weapon": "Polearm",
+        "nation": "Liyue"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/xianyun/icon-big",
+        "name": "Xianyun",
+        "rarity": 5,
+        "vision": "Anemo",
+        "weapon": "Catalyst",
+        "nation": "Liyue"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/xiao/icon-big",
+        "name": "Xiao",
+        "rarity": 5,
+        "vision": "Anemo",
+        "weapon": "Polearm",
+        "nation": "Liyue"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/xingqiu/icon-big",
+        "name": "Xingqiu",
+        "rarity": 4,
+        "vision": "Hydro",
+        "weapon": "Sword",
+        "nation": "Liyue"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/xinyan/icon-big",
+        "name": "Xinyan",
+        "rarity": 4,
+        "vision": "Pyro",
+        "weapon": "Claymore",
+        "nation": "Liyue"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/yae-miko/icon-big",
+        "name": "Yae Miko",
+        "rarity": 5,
+        "vision": "Electro",
+        "weapon": "Catalyst",
+        "nation": "Inazuma"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/yanfei/icon-big",
+        "name": "Yanfei",
+        "rarity": 4,
+        "vision": "Pyro",
+        "weapon": "Catalyst",
+        "nation": "Liyue"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/yaoyao/icon-big",
+        "name": "Yaoyao",
+        "rarity": 4,
+        "vision": "Dendro",
+        "weapon": "Polearm",
+        "nation": "Liyue"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/yelan/icon-big",
+        "name": "Yelan",
+        "rarity": 5,
+        "vision": "Hydro",
+        "weapon": "Bow",
+        "nation": "Liyue"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/yoimiya/icon-big",
+        "name": "Yoimiya",
+        "rarity": 5,
+        "vision": "Pyro",
+        "weapon": "Bow",
+        "nation": "Inazuma"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/yun-jin/icon-big",
+        "name": "Yun Jin",
+        "rarity": 4,
+        "vision": "Geo",
+        "weapon": "Polearm",
+        "nation": "Liyue"
+    },
+    {
+        "icon": "https://genshin.jmp.blue/characters/zhongli/icon-big",
+        "name": "Zhongli",
+        "rarity": 5,
+        "vision": "Geo",
+        "weapon": "Polearm",
+        "nation": "Liyue"
+    }
+]

@@ -20,6 +20,17 @@ body {
     gap: 25px;
 }
 
+.nations {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
 .buttons{
     max-width: fit-content;
     margin-left: auto;
@@ -31,8 +42,20 @@ body {
 }
 
 .buttons button{
-    padding: 5px;
+    padding: 5px 10px;
     font-size: large;
+    border-radius: 10px;
+}
+
+#mond{
+    background-color: #63BAAD;
+    border: #63BAAD;
+}
+
+#mond:hover{
+    background-color: #3e8278;
+    border: #3e8278;
+    color: white;
 }
 
 .icon {
@@ -47,7 +70,7 @@ body {
     font-style: oblique;
 }
 
-.character {
+.box {
     background-color: lightgrey;
     padding: 15px;
     width: 250px;

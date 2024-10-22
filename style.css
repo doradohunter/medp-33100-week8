@@ -1,0 +1,65 @@
+body{
+    padding-left: 15vw;
+    padding-right: 15vw;
+    background-image: url('https://wallpapers.com/images/featured-full/religious-background-ozlpyvdnblm55oto.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: "Open Sans", sans-serif;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    /* align-content: space-between; */
+}
+ h1{
+    color: white;
+    text-align: center;
+    font-style: italic;
+    font-family: "Dancing Script", serif;
+    font-size: 4em;
+    background-color: rgba(0, 0, 0, 0.37);
+    display: inline;
+}
+.userInfo, .holyInfo{
+    height: 50vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.user{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    color: white;
+    font-family: "Dancing Script", serif;
+    font-size: 2em;
+}
+input, button{
+    all: unset;
+    background-color: rgba(255, 255, 255, 0.582);
+    border-radius: 5px;
+    padding: 2%;
+    transition: .3s ease;
+}
+button{
+    font-family: "Dancing Script", serif;
+    font-size: 2em;
+    cursor: pointer;
+    text-align: center;
+}
+button:hover, input:hover{
+    background-color: rgba(255, 255, 255, 0.863);
+}
+.speech{
+    margin-top: 2%; 
+    margin-bottom: 2%; 
+    padding: 2%;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.87);
+    text-align: center;
+}
+.point{
+    align-self: center;
+}

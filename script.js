@@ -2,6 +2,7 @@ const api_url = 'https://genshin.jmp.blue/';
 const collection = document.querySelector('.collection');
 const nations = document.querySelector('.nations');
 let idealText;
+let runOnce = false;
 
 async function getAllCharacters() {
     const response = await fetch(api_url + 'characters/all');
@@ -48,13 +49,18 @@ function nationText(){
 const natButton = document.querySelector('#nationButton');
 
 natButton.addEventListener('click', async () => {
-    nationText();
-    getNations()
-        .then((data)=>{
-            data.forEach(nation=>{
-                showNations(nation);
-            })
-        });
+    if (!runOnce) {
+        nationText();
+        getNations()
+            .then((data)=>{
+                data.forEach(nation=>{
+                    showNations(nation);
+                })
+            });
+        runOnce = true;
+    } else {
+        console.log('Nations already added!');
+    }
 })
 
 class Nation {

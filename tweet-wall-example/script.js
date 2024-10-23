@@ -1,24 +1,68 @@
 const API_URL = 'https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1';
 const container = document.querySelector('.container');
 
-const DrawFirstHalf = 'https://deckofcardsapi.com/api/deck/new/draw/?count=10';
+const DrawCards = 'https://deckofcardsapi.com/api/deck/new/draw/?count=10';
+const contentElement = document.querySelector('.content');
 
-async function getCards() {
-    const response = await fetch(API_URL);
-    const data = await response.json();
-    console.log(data);
-    const deckID = data.deck_id;
-    return deckID;
+// async function getCards() {
+//     const response = await fetch(API_URL);
+//     const data = await response.json();
+//     console.log(data);
+//     const deckID = data.deck_id;
+//     return deckID;
+// }
+
+// const deckID = getCards();
+class Card {
+    constructor(element, value, suit, image){
+        this.element = element; //creates the overall element
+        this.value = value; //creates the name 
+        this.suit = suit;
+        this.image = image; //creates gpa
+
+        this.element.classList.add('placedCard');
+        // console.log(this);
+    }
+
+    displayID (){
+        this.element.innerHTML = "";
+
+        const imageElement = document.createElement('img');
+        imageElement.classList.add('image');
+        imageElement.src = this.image;
+        imageElement.alt = 'image of the playing card';
+
+        const valueElement = document.createElement('p');
+        valueElement.classList.add('value');
+        valueElement.innerText = this.value + " of " + this.suit;
+
+        this.element.appendChild(imageElement);
+        this.element.appendChild(valueElement);
+    }
 }
-
-const deckID = getCards();
 
 async function drawCards() {
-    const newResponse = await fetch(DrawFirstHalf);
+    const newResponse = await fetch(DrawCards);
     const newData = await newResponse.json();
+    const cardArray = newData.cards; //shorter, more descriptive
     console.log(newData);
+
+    // for (let i = 0; i < cardArray.length; i++){
+    //     console.log(cardArray[i].value)
+    //     console.log(cardArray[i].suit)
+    //     console.log(cardArray[i].image)
+    // }
+
+
+    for (let i = 0; i < cardArray.length; i++){
+        const idEl = document.createElement('div');
+        contentElement.appendChild(idEl);
+        const newCard = new Card(idEl, cardArray[i].value, cardArray[i].suit, cardArray[i].image)
+        newCard.displayID();
+    }
     return newData;
 }
+
 drawCards();
 
 

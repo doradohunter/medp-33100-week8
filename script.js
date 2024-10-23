@@ -35,15 +35,25 @@ function showNations(nat){
     nation.showNation();
 }
 
+function nationText(){
+    const heading = document.createElement('h2');
+    heading.innerText = 'Nations'
+    const text = document.createElement('p');
+    text.innerText = 'Click on the archon\'s name to scroll to their profile. But warning! Spoilers for some of their identities!';
+    nations.appendChild(heading);
+    nations.appendChild(text);
+}
+
 const natButton = document.querySelector('#nationButton');
 
 natButton.addEventListener('click', async () => {
+    nationText();
     getNations()
         .then((data)=>{
             data.forEach(nation=>{
                 showNations(nation);
             })
-        })
+        });
 })
 
 class Nation {
@@ -74,26 +84,48 @@ class Nation {
         eleElement.innerText = 'Element: ' + this.ele;
 
         const archonElement = document.createElement('p');
+        const archonLink = document.createElement('a');
+        archonLink.textContent = this.archon;
+        switch (this.archon) {
+            case 'Baal':
+                archonLink.href = "#raiden"
+                break;
+            case 'Focalors':
+                archonLink.href = '#furina'
+                break;
+            case 'Lesser Lord Kusanali':
+                archonLink.href = "#nahida"
+                break;
+            case 'Morax':
+                archonLink.href = "#zhongli"
+                break;
+            case 'Barbatos':
+                archonLink.href = "#venti"
+                break;
+            default:
+                break;
+        }
         archonElement.classList.add('archon');
-        archonElement.innerText = 'Archon: ' + this.archon;
+        archonElement.innerHTML = 'Archon: ';
 
         const controlElement = document.createElement('p');
         controlElement.classList.add('control');
-        controlElement.innerText = 'Control­ling En­ti­ty: ' + this.control;
+        controlElement.innerText = 'Controlling Entity: ' + this.control;
 
         this.element.appendChild(iconElement);
         this.element.appendChild(nameElement);
         this.element.appendChild(eleElement);
         this.element.appendChild(archonElement);
+        this.element.appendChild(archonLink);
         this.element.appendChild(controlElement);
     }
 }
 
 /*Class for Character*/
 class Character {
-    constructor(element, icon, name, rarity, vision, weapon, nation) {
+    constructor(element, id, name, rarity, vision, weapon, nation) {
         this.element = element;
-        this.icon = icon;
+        this.id = id;
         this.name = name;
         this.rarity = rarity;
         this.vision = vision;
@@ -101,6 +133,7 @@ class Character {
         this.nation = nation;
 
         this.element.classList.add('box', this.vision);
+        this.element.id = this.id;
 
     }
 
@@ -108,7 +141,7 @@ class Character {
         this.element.innerHTML = '';
 
         const iconElement = document.createElement('img');
-        const id = this.icon.toLowerCase();
+        const id = this.id.toLowerCase();
         iconElement.classList.add('icon');
         iconElement.src = api_url + 'characters/' + id + '/icon-big';
 

@@ -4,6 +4,10 @@ body {
     margin: 50px 200px;
 }
 
+h2{
+    text-align: center;
+}
+
 .content{
     max-width: fit-content;
     margin: auto;
@@ -45,17 +49,6 @@ body {
     padding: 5px 10px;
     font-size: large;
     border-radius: 10px;
-}
-
-#mond{
-    background-color: #63BAAD;
-    border: #63BAAD;
-}
-
-#mond:hover{
-    background-color: #3e8278;
-    border: #3e8278;
-    color: white;
 }
 
 .icon {

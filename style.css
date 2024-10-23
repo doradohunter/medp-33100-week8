@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+}
+
+.pokemon-container {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(227, 253, 227);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+#evolve {
+    padding: 3px 0px;
+    border: 5px solid rgb(111, 10, 10);
+    background-color: rgb(58, 58, 98);
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 10%;
+}
+
+.type-button {
+    color: white;
+    border-radius: 5px;
+    border-color: transparent;
+    cursor: default;
+    display: inline-block;
+    text-align: center;
+    padding: 1px 5px;
+    margin-left: 10px;
+}
+
+.fire {
+    background-color: red;
+}
+
+.water {
+    background-color: blue;
+}
+
+.grass {
+    background-color: green;
+}
+
+.fighting {
+    background-color: brown;
+}
+
+.poison {
+    background-color: purple;
+}
+
+.flying {
+    background-color: skyblue;
+}
+
+.ghost {
+    background-color: indigo;
+}
+
+.steel {
+    background-color: silver;
+}

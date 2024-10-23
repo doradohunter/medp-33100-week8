@@ -49,6 +49,22 @@ h2{
     padding: 5px 10px;
     font-size: large;
     border-radius: 10px;
+    background-color: #deb76c;
+    border: none;
+    color:white;
+}
+
+.buttons button:hover{
+    background-color: #b29256;
+}
+
+.buttons button:active{
+    background-color: #856e41;
+}
+
+a {
+    color: black;
+    text-decoration: underline;
 }
 
 .icon {
@@ -89,6 +105,11 @@ h2{
     color: white;
 }
 
+.Electro a{
+    color: white;
+    text-decoration: underline;
+}
+
 .Dendro {
     background-color: #aae273;
 }
@@ -100,6 +121,11 @@ h2{
 .Pyro {
     background-color: #B22222;
     color: white;
+}
+
+.Pyro a{
+    color: white;
+    text-decoration: underline;
 }
 
 .Cryo {

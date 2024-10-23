@@ -1,6 +1,7 @@
 const api_url = 'https://genshin.jmp.blue/';
 const collection = document.querySelector('.collection');
 const nations = document.querySelector('.nations');
+let idealText;
 
 async function getAllCharacters() {
     const response = await fetch(api_url + 'characters/all');
@@ -89,24 +90,33 @@ class Nation {
         switch (this.archon) {
             case 'Baal':
                 archonLink.href = "#raiden"
+                idealText = 'Eternity'
                 break;
             case 'Focalors':
                 archonLink.href = '#furina'
+                idealText = 'Justice'
                 break;
             case 'Lesser Lord Kusanali':
                 archonLink.href = "#nahida"
+                idealText = 'Wisdom'
                 break;
             case 'Morax':
                 archonLink.href = "#zhongli"
+                idealText = 'Contracts'
                 break;
             case 'Barbatos':
                 archonLink.href = "#venti"
+                idealText = 'Freedom'
                 break;
             default:
                 break;
         }
         archonElement.classList.add('archon');
         archonElement.innerHTML = 'Archon: ';
+
+        const idealElement = document.createElement('p');
+        
+        idealElement.innerText = 'Ideal: ' + idealText;
 
         const controlElement = document.createElement('p');
         controlElement.classList.add('control');
@@ -117,6 +127,7 @@ class Nation {
         this.element.appendChild(eleElement);
         this.element.appendChild(archonElement);
         this.element.appendChild(archonLink);
+        this.element.appendChild(idealElement);
         this.element.appendChild(controlElement);
     }
 }

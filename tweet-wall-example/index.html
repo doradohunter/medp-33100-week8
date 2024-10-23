@@ -5,21 +5,24 @@
     <meta charset="UTF-8" />
     <title>Tweet wall</title>
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="styles.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="script.js" defer></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script> -->
 </head>
 
 <body>
-    <div class="new-tweet-container">
+    <div id="buttonContainer">
+        <button id="drawButton" class="button">Draw cards</button>
+        <button id="reDraw" class="button">Redraw cards</button>
+        <!-- <button id="returnCards" class="button">Return cards</button> -->
+    </div>
+    <!-- <div class="new-tweet-container">
         <input type="text" class="tweet-input" placeholder="What's happening @dora_codes?" />
         <button class="create-tweet-button">Tweet</button>
     </div>
     <div class="hashtag-container">
         <button class="hashtag-button">#coding</button>
-    </div>
-    <div class="container"></div>
-    <script src="script.js"></script>
+    </div> -->
+    <div class="content"></div>
 </body>
 
 </html>

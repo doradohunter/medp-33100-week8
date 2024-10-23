@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Week 7</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Comforta" rel="stylesheet">
+
+</head>
+
+<body>
+    <h1>The DigiDatabase
+    </h1>
+    <h1>
+        <form id='nameForm'>
+            <label for="diginame">Enter the name of a Digimon:</label><br><br>
+            <input type="text" id="diginame" name="diginame" placeholder="Example: Agumon">
+            <input type="submit" value="Submit">
+        </form>
+        <form id="levelForm">
+            <label for="digilevel">Enter a Digimon level: </label><br><br>
+            <input type="text" id="digilevel" name="digilevel" placeholder="Example: Rookie">
+            <input type="submit" value="Submit">
+        </form>
+    </h1>
+
+    <div class="holder">
+    </div>
+    <script src="fetchData.js"></script>
+</body>
+
+</html>

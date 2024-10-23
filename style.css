@@ -13,7 +13,12 @@ body {
     margin: 20px auto;
     display: flex;
     flex-direction: column;
-    background-color: rgb(227, 253, 227);
+    background: repeating-linear-gradient(
+        rgb(227, 253, 227),
+        rgb(227, 253, 227) 13px,
+        rgb(248, 255, 248) 10px,
+        rgb(227, 253, 227) 20px
+    );
     padding: 20px;
     border-radius: 20px;
 }

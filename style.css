@@ -1,0 +1,33 @@
+body{
+    background-color: pink;
+}
+
+.map{
+    display: flex;
+    justify-content: center;
+}
+
+#content{
+    width: 800px;
+    height: 800px;
+}
+
+.info{
+    display: flex;
+    justify-content: space-around;
+}
+
+.info button{
+    padding: 10px;
+    margin: 50px;
+    border: none;
+    border-radius: 20px;
+    background-color: azure;
+}
+
+.info button:hover{
+    background-color: lightslategray;
+    cursor: pointer;
+}
+
+

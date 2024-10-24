@@ -1,0 +1,111 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+.pokemon-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon-image {
+  width: 200px;
+  height: 200px;
+  margin: 10px 0;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.catch-btn {
+  background-color: #ff5555;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.catch-btn:hover {
+  background-color: #ff3333;
+}
+
+.skip-btn {
+  background-color: #666;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.skip-btn:hover {
+  background-color: #444;
+}
+
+.loading {
+  opacity: 0.5;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.stat {
+  background-color: #f8f8f8;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.caught-container {
+  margin-top: 30px;
+}
+
+.caught-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.caught-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.caught-card:hover {
+  transform: translateY(-5px);
+}
+
+.caught-image {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.caught-name {
+  font-size: 1em;
+  margin: 0;
+  color: #333;
+}

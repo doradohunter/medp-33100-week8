@@ -110,7 +110,7 @@ fetchCharacterData()
             const characterEl = document.createElement('div');
             characterEl.classList.add('character');
 
-            const character = new Character(characterEl, data.name, data.house || 'No House', data.wizard, data.image);
+            const character = new Character(characterEl, data.name, data.house || 'None', data.wizard, data.image);
             character.createCharacter();
             charactersContainer.appendChild(characterEl);
         });

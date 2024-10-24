@@ -1,16 +1,15 @@
-// Replace with your own API key from Spoonacular
-const API_KEY = '1fbe1e25532448dfa8ce7a76bcec174e'; // Get your API key from Spoonacular
+const API_KEY = '1fbe1e25532448dfa8ce7a76bcec174e';
 const RANDOM_RECIPE_URL = `https://api.spoonacular.com/recipes/random?apiKey=${API_KEY}`;
 const SEARCH_RECIPE_URL = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${API_KEY}`;
 
-// Function to fetch and display a random recipe
+// Random Recipe
 async function fetchRandomRecipe() {
     try {
         const response = await fetch(RANDOM_RECIPE_URL);
         const data = await response.json();
         const recipe = data.recipes[0];
 
-        // Display the recipe details
+        // Recipe Details
         document.getElementById('randomRecipeText').innerHTML = `
             <h3><a href="${recipe.sourceUrl}" target="_blank">${recipe.title}</a></h3>
             <p>${recipe.summary}</p>
@@ -22,18 +21,17 @@ async function fetchRandomRecipe() {
     }
 }
 
-
-// Function to search for recipes by ingredient
+// Search for Recipes by Ingredient
 async function searchRecipesByIngredient(ingredient) {
     try {
         const response = await fetch(`${SEARCH_RECIPE_URL}&ingredients=${ingredient}`);
         const recipes = await response.json();
         
-        // Clear previous results
+        // clear previous results
         const resultsContainer = document.getElementById('searchResults');
         resultsContainer.innerHTML = '';
 
-        // Display each recipe found
+        // display results
         recipes.forEach(recipe => {
             const recipeElement = document.createElement('div');
             recipeElement.className = 'recipe';
@@ -53,8 +51,7 @@ async function searchRecipesByIngredient(ingredient) {
     }
 }
 
-
-// Event listener for the search button
+// search button
 document.getElementById('searchButton').addEventListener('click', () => {
     const ingredient = document.getElementById('ingredientInput').value;
     if (ingredient) {
@@ -64,5 +61,4 @@ document.getElementById('searchButton').addEventListener('click', () => {
     }
 });
 
-// Fetch and display a random recipe on page load
 fetchRandomRecipe();

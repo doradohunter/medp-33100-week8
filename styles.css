@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 20px;
+}
+
+.card {
+    background-color: #e0e0e0; /* Light gray background */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 1300px;
+}
+
+/* Random Recipe Section */
+.random-recipe-section {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.recipe-text h2 {
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+.recipe-text p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.recipe-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.similar-recipe {
+    margin-top: 20px;
+}
+
+/* Search Section */
+.search-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 60%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #d63447;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #b02a35;
+}
+
+.search-results {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px; /* Spacing between items */
+    margin-top: 20px;
+}
+
+.search-results .recipe {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.search-results img {
+    width: 100%; /* Full width */
+    height: 180px; /* Set a fixed height */
+    object-fit: cover;
+}
+
+.search-results h4 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .search-results {
+        grid-template-columns: 1fr 1fr; /* Two items per row on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .search-results {
+        grid-template-columns: 1fr; /* Stack items vertically on very small screens */
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Random Recipe Section -->
+    <div class="card">
+        <section class="random-recipe-section">
+            <div class="recipe-text">
+                <h2>Random Recipe</h2>
+                <div id="randomRecipeText">
+                    Example recipe description here.
+                </div>
+            </div>
+            <div class="recipe-image">
+                <img id="randomRecipeImage" src="https://via.placeholder.com/400" alt="Recipe Image">
+            </div>
+        </section>
+    </div>
+
+    <!-- Search Recipes by Ingredient Section -->
+    <div class="card">
+        <section class="search-section">
+            <h2>Find Recipes by Ingredient</h2>
+            <div class="search-bar">
+                <input type="text" id="ingredientInput" placeholder="Enter an ingredient">
+                <button id="searchButton">Search</button>
+            </div>
+        </section>
+
+        <!-- Search Results Section -->
+        <section id="searchResults" class="search-results">
+            <!-- Search results will appear here, 3 pictures in a row -->
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

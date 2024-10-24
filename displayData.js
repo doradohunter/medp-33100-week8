@@ -85,7 +85,6 @@ async function getLevelByButton(button) {
   // console.log(data);
 }
 
-
 const rookieButton = document.querySelector(".rookie_btn");
 rookieButton.addEventListener("click", async () => {
   libraryElement.innerHTML = ""; //where it resets
@@ -240,6 +239,31 @@ const megaButton = document.querySelector(".mega_btn");
 megaButton.addEventListener("click", async () => {
   libraryElement.innerHTML = ""; //where it resets
   const levels = await getLevelByButton("mega");
+  console.log(levels);
+  levels.forEach((levelData) => {
+    const digiEl = document.createElement("div");
+    digiEl.classList.add("character");
+    digiEl.style.backgroundColor = levelColors[levelData.level] || "#edccff"; 
+    digiEl.style.textAlign = "center";
+    digiEl.style.borderRadius = "10%";
+    digiEl.style.height = "25em";
+    digiEl.style.boxShadow = "10px 10px #262627";
+    digiEl.style.border = "solid";
+    const character = new Character(
+      digiEl,
+      levelData.name,
+      levelData.level,
+      levelData.img
+    );
+    character.displayCharacter(levelData);
+    libraryElement.appendChild(digiEl);
+  });
+});
+
+const allButton = document.querySelector(".all_btn");
+allButton.addEventListener("click", async () => {
+  libraryElement.innerHTML = ""; //where it resets
+  const levels = await getCharacterData();
   console.log(levels);
   levels.forEach((levelData) => {
     const digiEl = document.createElement("div");

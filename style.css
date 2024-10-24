@@ -30,7 +30,7 @@ h2 {
     color: rgb(0, 0, 0);
     text-shadow: 2px 2px #ffffff;
 }
-.rookie_btn, .intraining_btn,
+.all_btn, .rookie_btn, .intraining_btn,
 .training_btn, .champion_btn, 
 .ultimate_btn, .fresh_btn, .mega_btn  {
     background-color: transparent;
@@ -44,7 +44,7 @@ h2 {
     text-shadow: 2px 2px #ffffff;
 }
 
-button.rookie_btn:hover, button.intraining_btn:hover,
+button.all_btn:hover, button.rookie_btn:hover, button.intraining_btn:hover,
 button.training_btn:hover, button.champion_btn:hover, 
 button.ultimate_btn:hover, button.fresh_btn:hover, 
 button.mega_btn:hover {

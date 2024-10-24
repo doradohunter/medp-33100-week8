@@ -54,31 +54,68 @@ class Character{
     }
 }
 
-async function fetchCharacterData(){
+//filter characters by house
+async function fetchCharacterData(house = ''){
     const response = await fetch('https://hp-api.herokuapp.com/api/characters');
     if (!response.ok){
         throw new Error('Failed to fetch characters');
     }
     const data = await response.json();
-    console.log(data);
+
+    if(house){
+        return data.filter(character => character.house === house);
+    }
     return data;
 }
 
-console.log(fetchCharacterData());
+//event listener
+const houseButtons = document.querySelectorAll('.filter');
+const charactersContainer = document.querySelector('.characters');
+
+function clearCharacters(){
+    const charactersContainer = document.querySelector('.characters');
+    charactersContainer.innerHTML = '';
+}
+
+houseButtons.forEach(button =>{
+    button.addEventListener('click', async () =>{
+        let house = '';
+        if(!button.classList.contains('all')){
+            //access the second class of the button
+            house = button.classList[1];
+        }
+
+        clearCharacters();
+
+        try{
+            const chars = await fetchCharacterData(house);
+            chars.forEach(data =>{
+                const characterEl = document.createElement('div');
+                characterEl.classList.add('character');
+
+                const character = new Character(characterEl, data.name, data.house, data.wizard, data.image);
+                character.createCharacter();
+                charactersContainer.appendChild(characterEl);
+            })
+        }catch(error){
+            console.error(error);
+        }
+    })
+})
+
 
 fetchCharacterData()
-    .then((data) =>{
-        const characters = document.querySelector('.characters');
-
-        for(let i = 0; i < data.length; i++){
+    .then(data =>{
+        data.forEach(data =>{
             const characterEl = document.createElement('div');
             characterEl.classList.add('character');
 
-            const character = new Character(characterEl, data[i].name, data[i].house, data[i].wizard, data[i].image);
+            const character = new Character(characterEl, data.name, data.house || 'No House', data.wizard, data.image);
             character.createCharacter();
-            characters.appendChild(characterEl);
-        }
+            charactersContainer.appendChild(characterEl);
+        });
     })
+    .catch(error => console.error(error));
 
 
 

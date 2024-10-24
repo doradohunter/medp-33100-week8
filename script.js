@@ -1,69 +1,59 @@
-const API_KEY = 'f46e9fc3a92c46ccb6539d0b71e48dea';
-const RANDOM_RECIPE_URL = `https://api.spoonacular.com/recipes/random?apiKey=${API_KEY}`;
-const SEARCH_RECIPE_URL = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${API_KEY}`;
+class Sprite {
+    constructor(data) {
+        this.name = data.name;
+        this.image = data.img;
+        this.level = data.level;
+        this.isFavorite = false;
+    }
 
-// Random Recipe
-async function fetchRandomRecipe() {
-    try {
-        const response = await fetch(RANDOM_RECIPE_URL);
-        const data = await response.json();
-        const recipe = data.recipes[0];
+    render() {
+        const container = document.getElementById('sprite-container');
+        const spriteElement = document.createElement('div');
+        spriteElement.className = 'sprite';
 
-        // Recipe Details
-        document.getElementById('randomRecipeText').innerHTML = `
-            <h3>${recipe.title}</h3>
-            <h3><a href="${recipe.sourceUrl}" target="_blank">${recipe.title}</a></h3>
-            <p>${recipe.summary}</p>
-            <a href="${recipe.sourceUrl}" target="_blank">View Recipe</a>
-        `;
-        document.getElementById('randomRecipeImage').src = recipe.image;
-    } catch (error) {
-        console.error('Error fetching random recipe:', error);
-        document.getElementById('randomRecipeText').innerHTML = 'Failed to load random recipe.';
+        const imgElement = document.createElement('img');
+        imgElement.src = this.image;
+        imgElement.alt = this.name;
+
+        // name element
+        const nameElement = document.createElement('p');
+        nameElement.className = 'sprite-name';
+        nameElement.textContent = this.name;
+
+        // level element
+        const levelElement = document.createElement('p');
+        levelElement.className = 'sprite-level';
+        levelElement.textContent = `Level: ${this.level}`;
+
+        // favorite button
+        const favoriteButton = document.createElement('span');
+        favoriteButton.innerHTML = '🤍';
+        favoriteButton.className = 'favorite-btn';
+        favoriteButton.onclick = () => this.toggleFavorite(spriteElement, favoriteButton);
+
+        spriteElement.appendChild(imgElement);
+        spriteElement.appendChild(nameElement);
+        spriteElement.appendChild(levelElement);
+        spriteElement.appendChild(favoriteButton);
+        container.appendChild(spriteElement);
+
+        gsap.from(spriteElement, { duration: 1, y: 50, opacity: 0, ease: 'power2.out' });
+    }
+
+    toggleFavorite(spriteElement, favoriteButton) {
+        this.isFavorite = !this.isFavorite;
+        favoriteButton.innerHTML = this.isFavorite ? '💙' : '🤍';
+        spriteElement.classList.toggle('favorite', this.isFavorite);
     }
 }
 
-// search for recipes by ingredient
-async function searchRecipesByIngredient(ingredient) {
-    try {
-        const response = await fetch(`${SEARCH_RECIPE_URL}&ingredients=${ingredient}`);
-        const recipes = await response.json();
-
-        // clear previous results
-        const resultsContainer = document.getElementById('searchResults');
-        resultsContainer.innerHTML = '';
-
-        // display results
-        recipes.forEach(recipe => {
-            const recipeElement = document.createElement('div');
-            recipeElement.className = 'recipe';
-            recipeElement.innerHTML = `
-                <h4>${recipe.title}</h4>
-                <img src="${recipe.image}" alt="${recipe.title}">
-                <a href="https://spoonacular.com/recipes/${recipe.id}" target="_blank">View Recipe</a>
-                <h4><a href="https://spoonacular.com/recipes/${recipe.id}" target="_blank">${recipe.title}</a></h4>
-            `;
-            resultsContainer.appendChild(recipeElement);
+// Fetch and Render Data
+fetch('https://digimon-api.vercel.app/api/digimon')
+    .then(response => response.json())
+    .then(data => {
+        data.forEach(digimon => {
+            const sprite = new Sprite(digimon);
+            sprite.render();
         });
-
-        if (recipes.length === 0) {
-            resultsContainer.innerHTML = '<p>No recipes found for this ingredient.</p>';
-        }
-    } catch (error) {
-        console.error('Error searching recipes:', error);
-        document.getElementById('searchResults').innerHTML = 'Failed to load search results.';
-    }
-}
-
-// search button
-document.getElementById('searchButton').addEventListener('click', () => {
-    const ingredient = document.getElementById('ingredientInput').value;
-    if (ingredient) {
-        searchRecipesByIngredient(ingredient);
-    } else {
-        alert('Please enter an ingredient.');
-    }
-});
-
-// Fetch and display a random recipe on page load
-fetchRandomRecipe();
+    })
+    .catch(error => console.log('Error fetching data:', error));

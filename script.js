@@ -1,4 +1,4 @@
-const API_KEY = '1fbe1e25532448dfa8ce7a76bcec174e';
+const API_KEY = 'f46e9fc3a92c46ccb6539d0b71e48dea';
 const RANDOM_RECIPE_URL = `https://api.spoonacular.com/recipes/random?apiKey=${API_KEY}`;
 const SEARCH_RECIPE_URL = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${API_KEY}`;
 
@@ -11,8 +11,10 @@ async function fetchRandomRecipe() {
 
         // Recipe Details
         document.getElementById('randomRecipeText').innerHTML = `
+            <h3>${recipe.title}</h3>
             <h3><a href="${recipe.sourceUrl}" target="_blank">${recipe.title}</a></h3>
             <p>${recipe.summary}</p>
+            <a href="${recipe.sourceUrl}" target="_blank">View Recipe</a>
         `;
         document.getElementById('randomRecipeImage').src = recipe.image;
     } catch (error) {
@@ -21,12 +23,12 @@ async function fetchRandomRecipe() {
     }
 }
 
-// Search for Recipes by Ingredient
+// search for recipes by ingredient
 async function searchRecipesByIngredient(ingredient) {
     try {
         const response = await fetch(`${SEARCH_RECIPE_URL}&ingredients=${ingredient}`);
         const recipes = await response.json();
-        
+
         // clear previous results
         const resultsContainer = document.getElementById('searchResults');
         resultsContainer.innerHTML = '';
@@ -36,7 +38,9 @@ async function searchRecipesByIngredient(ingredient) {
             const recipeElement = document.createElement('div');
             recipeElement.className = 'recipe';
             recipeElement.innerHTML = `
+                <h4>${recipe.title}</h4>
                 <img src="${recipe.image}" alt="${recipe.title}">
+                <a href="https://spoonacular.com/recipes/${recipe.id}" target="_blank">View Recipe</a>
                 <h4><a href="https://spoonacular.com/recipes/${recipe.id}" target="_blank">${recipe.title}</a></h4>
             `;
             resultsContainer.appendChild(recipeElement);
@@ -61,4 +65,5 @@ document.getElementById('searchButton').addEventListener('click', () => {
     }
 });
 
+// Fetch and display a random recipe on page load
 fetchRandomRecipe();

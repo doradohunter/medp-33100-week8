@@ -31,24 +31,35 @@ class Character{
         wizardElement.classList.add('character_wizard');
         wizardElement.innerText = 'Is A Wizard: '+ this.wizard;
 
+        //delete button
+        const deleteButton = document.createElement('button');
+        deleteButton.innerHTML = 'Delete';
+        deleteButton.addEventListener('click', async () => {
+            await deleteChar(this.id);
+            this.element.remove();
+        })
+
         text.appendChild(nameElement);
         text.appendChild(houseElement);
         text.appendChild(wizardElement);
 
         this.element.appendChild(imgElement);
         this.element.appendChild(text);
+        text.appendChild(deleteButton);
     }
 }
 
 async function fetchCharacterData(){
     const response = await fetch('https://hp-api.herokuapp.com/api/characters');
-    if (response.ok){
-        const data = await response.json();
-        console.log(data);
-        return data;
+    if (!response.ok){
+        throw new Error('Failed to fetch characters');
     }
-    return [];
+    const data = await response.json();
+    console.log(data);
+    return data;
 }
+
+console.log(fetchCharacterData());
 
 fetchCharacterData()
     .then((data) =>{
@@ -62,3 +73,14 @@ fetchCharacterData()
             characters.appendChild(characterEl);
         }
     })
+
+
+//delete function
+async function deleteChar(characterId){
+    const response = await fetch('https://hp-api.herokuapp.com/api/characters',{
+        method: 'DELETE'
+    });
+    if(!response.ok){
+        throw new Error('Failed to delete character');
+    }
+}

@@ -1,0 +1,54 @@
+@font-face {
+    font-family: digiFont;
+    src: url(PixelDigivolve-mOm9.ttf);
+}
+html {
+    background: linear-gradient(to bottom, #D2E9FB 0%, #ccccff 100%);
+}
+
+.library {
+    font-family: digiFont;
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    width: 100%;
+    background-size: cover;
+}
+
+h1 {
+    font-family: digiFont;
+    text-shadow: 2px 2px #ffffff;
+}
+
+h2 {
+    font-family: digiFont;
+    display: inline;
+    margin: 0 30px;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px #ffffff;
+}
+.rookie_btn, .intraining_btn,
+.training_btn, .champion_btn, 
+.ultimate_btn, .fresh_btn, .mega_btn  {
+    background-color: transparent;
+    font-size: 20px; 
+    border: none;
+    font-family: digiFont;
+    display: inline;
+    margin: 0 30px;
+    color: blueviolet;
+    cursor: pointer;
+    text-shadow: 2px 2px #ffffff;
+}
+
+button.rookie_btn:hover, button.intraining_btn:hover,
+button.training_btn:hover, button.champion_btn:hover, 
+button.ultimate_btn:hover, button.fresh_btn:hover, 
+button.mega_btn:hover {
+    text-decoration: underline;
+    font-size: 140%;
+    color: #303F9F;
+}

@@ -15,17 +15,17 @@ class Sprite {
         imgElement.src = this.image;
         imgElement.alt = this.name;
 
-        // name element
+        // Name element
         const nameElement = document.createElement('p');
         nameElement.className = 'sprite-name';
         nameElement.textContent = this.name;
 
-        // level element
+        // Level element
         const levelElement = document.createElement('p');
         levelElement.className = 'sprite-level';
         levelElement.textContent = `Level: ${this.level}`;
 
-        // favorite button
+        // Favorite button
         const favoriteButton = document.createElement('span');
         favoriteButton.innerHTML = '🤍';
         favoriteButton.className = 'favorite-btn';
@@ -44,6 +44,23 @@ class Sprite {
         this.isFavorite = !this.isFavorite;
         favoriteButton.innerHTML = this.isFavorite ? '💙' : '🤍';
         spriteElement.classList.toggle('favorite', this.isFavorite);
+
+        // Simulated POST request
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            body: JSON.stringify({
+                name: this.name,
+                favorite: this.isFavorite
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('POST response:', data);
+        })
+        .catch(error => console.log('Error with POST request:', error));
     }
 }
 

@@ -7,6 +7,18 @@ class Character{
         this.imgURL = imgURL;
     }
 
+    setBackgroundColor() {
+        const houseColors = {
+            Gryffindor: '#740001',
+            Hufflepuff: '#a69016',
+            Ravenclaw: '#0E1A40',
+            Slytherin: '#1A472A',
+            default: '#424240'
+        };
+
+        this.element.style.backgroundColor = houseColors[this.house] || houseColors.default;
+    }
+
     createCharacter(){
         this.innerHTML = '';
 
@@ -31,13 +43,6 @@ class Character{
         wizardElement.classList.add('character_wizard');
         wizardElement.innerText = 'Is A Wizard: '+ this.wizard;
 
-        //delete button
-        const deleteButton = document.createElement('button');
-        deleteButton.innerHTML = 'Delete';
-        deleteButton.addEventListener('click', async () => {
-            await deleteChar(this.id);
-            this.element.remove();
-        })
 
         text.appendChild(nameElement);
         text.appendChild(houseElement);
@@ -45,7 +50,7 @@ class Character{
 
         this.element.appendChild(imgElement);
         this.element.appendChild(text);
-        text.appendChild(deleteButton);
+        this.setBackgroundColor();
     }
 }
 
@@ -68,6 +73,7 @@ fetchCharacterData()
         for(let i = 0; i < data.length; i++){
             const characterEl = document.createElement('div');
             characterEl.classList.add('character');
+
             const character = new Character(characterEl, data[i].name, data[i].house, data[i].wizard, data[i].image);
             character.createCharacter();
             characters.appendChild(characterEl);
@@ -75,12 +81,4 @@ fetchCharacterData()
     })
 
 
-//delete function
-async function deleteChar(characterId){
-    const response = await fetch('https://hp-api.herokuapp.com/api/characters',{
-        method: 'DELETE'
-    });
-    if(!response.ok){
-        throw new Error('Failed to delete character');
-    }
-}
+

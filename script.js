@@ -12,9 +12,8 @@ async function fetchRandomRecipe() {
 
         // Display the recipe details
         document.getElementById('randomRecipeText').innerHTML = `
-            <h3>${recipe.title}</h3>
+            <h3><a href="${recipe.sourceUrl}" target="_blank">${recipe.title}</a></h3>
             <p>${recipe.summary}</p>
-            <a href="${recipe.sourceUrl}" target="_blank">View Recipe</a>
         `;
         document.getElementById('randomRecipeImage').src = recipe.image;
     } catch (error) {
@@ -22,6 +21,7 @@ async function fetchRandomRecipe() {
         document.getElementById('randomRecipeText').innerHTML = 'Failed to load random recipe.';
     }
 }
+
 
 // Function to search for recipes by ingredient
 async function searchRecipesByIngredient(ingredient) {
@@ -38,9 +38,8 @@ async function searchRecipesByIngredient(ingredient) {
             const recipeElement = document.createElement('div');
             recipeElement.className = 'recipe';
             recipeElement.innerHTML = `
-                <h4>${recipe.title}</h4>
                 <img src="${recipe.image}" alt="${recipe.title}">
-                <a href="https://spoonacular.com/recipes/${recipe.id}" target="_blank">View Recipe</a>
+                <h4><a href="https://spoonacular.com/recipes/${recipe.id}" target="_blank">${recipe.title}</a></h4>
             `;
             resultsContainer.appendChild(recipeElement);
         });
@@ -53,6 +52,7 @@ async function searchRecipesByIngredient(ingredient) {
         document.getElementById('searchResults').innerHTML = 'Failed to load search results.';
     }
 }
+
 
 // Event listener for the search button
 document.getElementById('searchButton').addEventListener('click', () => {

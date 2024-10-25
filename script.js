@@ -102,11 +102,17 @@ function fetchWeather(lat, lon, city) {
       temperature: temperature,
       lat: lat,
       lon: lon,
-      timestamp: new Date().toISOString() //I asked chatgpt for this part
+      timestamp: new Date().toISOString() //I asked chatgpt for this part but its still not working so I will be throwing the towel. I wanted it to save the data in the corner of the screen.
     };
     localStorage.setItem(`weatherData_${city}`, JSON.stringify(weatherData));
     displayWeatherData(weatherData);
   }
 function mapCoordinates(value, minGeo, maxGeo, minScreen, maxScreen) {
   return ((value - minGeo) / (maxGeo - minGeo)) * (maxScreen - minScreen) + minScreen;
+}
+console.log('Weather Data:', weatherData);
+
+function displayWeatherData(weatherData) {
+  const weatherDisplay = document.getElementById('weather-display');
+  weatherDisplay.innerHTML = `City: ${weatherData.city}<br>Temperature: ${weatherData.temperature}°C`;
 }

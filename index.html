@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button-Controlled Joke Carousel</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Random Joke Generator</h1>
+    </header>
+    <section>
+      <button>general</button>
+      <button>programming</button>
+      <button>dad</button>
+      <button>knock-knock</button>
+    </section>
+    <section>
+      <div id="all-joke-container">
+        <div class="joke-card">
+          <div class="type"></div>
+          <div class="setup"></div>
+          <div class="punchline"></div>
+        </div>
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>

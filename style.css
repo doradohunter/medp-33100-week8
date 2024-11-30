@@ -1,0 +1,33 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+canvas {
+  display: block;
+  margin: 20px auto;
+  border: 2px solid #b52c2c;
+}
+
+input {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+h1 {
+  color: #d40a0a;
+}
+#weather-display {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: rgb(8, 0, 242);
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
